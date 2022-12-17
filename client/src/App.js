@@ -17,7 +17,7 @@ setuser(data);
   
   return (
     <div className="App">
-     { user.map(item=><div><h1>cash : {item.cash}  credit : {item.credit}</h1></div>)}
+     { user?.map(item=><div><h1>cash : {item.cash} credit:{item.credit}</h1> </div>)}
     </div>
   );
 }
