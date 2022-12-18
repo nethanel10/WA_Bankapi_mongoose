@@ -8,14 +8,13 @@ import path from 'path';
 const _dirname=url.fileURLToPath(new URL ('./',import.meta.url))
 dotenv.config();
 const app=express();
-app.use(cors());
+app.use(cors({credentials:true}));
 
 // const corsOrigin ={
 //     origin:'http://localhost:3000', //or whatever port your frontend is using
 //     credentials:true,            
 //     optionSuccessStatus:200
 // }
-app.use(cors({credentials:true}));
 const publicpath=path.join(_dirname,'build')
 app.use(express.static(publicpath))
 
